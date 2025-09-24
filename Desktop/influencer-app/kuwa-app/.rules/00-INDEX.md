@@ -1,0 +1,22 @@
+# Rules Index
+
+- 01-Architecture.md
+- 02-Code-Style.md
+- 03-Folder-Structure.md
+- 04-State-Management.md
+- 05-Navigation.md
+- 06-Theming-DesignTokens.md
+- 07-Networking-Data.md
+- 08-Error-Handling-Logging.md
+- 09-Performance.md
+- 10-Accessibility-i18n.md
+- 11-Testing.md
+- 12-Git-Branching-Commits.md
+- 13-PR-Checklist.md
+- 14-Release-Checklist.md
+- 15-CI-CD.md
+- 16-Security-Secrets.md
+- 17-Store-Guidelines.md
+- 18-Analytics-Events.md
+- 19-Flavors-Env.md
+- 20-Code-Generation.md

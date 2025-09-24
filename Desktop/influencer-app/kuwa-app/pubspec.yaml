@@ -1,0 +1,43 @@
+name: kuwa_app
+description: A new Flutter projesi.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # State Management
+  flutter_riverpod: ^2.4.9
+
+  # Navigation
+  go_router: ^12.1.1
+
+  # UI Components
+  cupertino_icons: ^1.0.2
+  font_awesome_flutter: ^10.7.0   # ✅ doğru yerde
+
+  # Internationalization
+  intl: any
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  assets:
+    - assets/images/
+
+  fonts:
+    - family: IntroRust
+      fonts:
+        - asset: assets/fonts/IntroRust.otf

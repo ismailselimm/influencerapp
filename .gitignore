@@ -1,0 +1,11 @@
+# Node.js
+/backend/node_modules/
+
+# Flutter
+.flutter/
+.dart_tool/
+.idea/
+/build/
+
+# Docker ve Veritabanı
+/pgdata/

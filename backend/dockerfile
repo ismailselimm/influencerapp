@@ -1,0 +1,20 @@
+# Bir Node.js imajı seçin
+FROM node:18-alpine
+
+# Çalışma dizinini belirleyin
+WORKDIR /app
+
+# package.json ve package-lock.json dosyalarını kopyalayın
+COPY package*.json ./
+
+# Node.js bağımlılıklarını kurun
+RUN npm install
+
+# Tüm uygulama kodlarını kopyalayın
+COPY . .
+
+# Uygulamanın çalışacağı portu belirleyin
+EXPOSE 3000
+
+# Uygulamayı başlatın
+CMD ["npm", "start"]

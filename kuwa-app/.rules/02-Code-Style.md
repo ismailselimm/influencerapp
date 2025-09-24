@@ -1,0 +1,24 @@
+# Code Style (Dart/Flutter)
+
+- **Formatting**: `dart format .` (no custom width).
+- **Lints**: see `analysis_options.yaml`.
+- **Imports**
+  - Use absolute `package:` imports inside lib.
+  - Group: Dart → Flutter → 3rd-party → local; blank line between groups.
+- **Naming**
+  - Classes/Enums: `PascalCase`
+  - methods/vars: `camelCase`
+  - constants: `lowerCamelCase` (Dart style)
+  - files: `snake_case.dart`
+- **Widgets**
+  - Prefer small, pure widgets; keep build methods ≤ 80 lines.
+  - Extract reusable pieces; pass only required data.
+  - Avoid rebuilding heavy widgets (use `const`, `keys`, selectors).
+- **State**
+  - No setState in deep trees for global concerns; use state mgmt.
+- **Async**
+  - Avoid `unawaited` futures unless justified and documented.
+  - Cancel streams/timers; dispose controllers.
+- **Docs**
+  - Public APIs need doc comments `///`.
+  - Complex layouts/magic numbers: explain *why*.

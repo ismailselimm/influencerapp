@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: kuwa_app_db
+    restart: always
+    environment:
+      POSTGRES_USER: kuwa_admin
+      POSTGRES_PASSWORD: "kuwa_123_kuwa**!"
+      POSTGRES_DB: kuwa_db
+    ports:
+      - "5433:5432" # Yerel makinenizde 5433, konteyner içinde 5432
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+      - ./db/init-scripts:/docker-entrypoint-initdb.d
+  
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: kuwa_app_pgadmin
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@kuwa.com
+      PGADMIN_DEFAULT_PASSWORD: kuwa_123_kuwa**!
+    ports:
+      - "5051:80" # Yerel makinenizde 5051, konteyner içinde 80
+    depends_on:
+      - postgres
+
+  backend:
+    build: ./backend
+    container_name: kuwa_app_backend
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - postgres
+    environment:
+      # Bağlantı için 'postgres' servis adını ve iç portu (5432) kullanın
+      DATABASE_URL: postgresql://kuwa_admin:kuwa_123_kuwa**!@postgres:5432/kuwa_db
+
+volumes:
+  pgdata:

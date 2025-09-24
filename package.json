@@ -1,0 +1,22 @@
+{
+  "name": "kuwa-app",
+  "version": "1.0.0",
+  "description": "Simple modern authentication app with Clean Architecture.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuwa-media-software/kuwa-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kuwa-media-software/kuwa-app/issues"
+  },
+  "homepage": "https://github.com/kuwa-media-software/kuwa-app#readme",
+  "dependencies": {
+    "yarn": "^1.22.22"
+  }
+}
